@@ -14,7 +14,9 @@ const CakeForm = ({ addCake }) => {
     }
 
     const updateCakeIngredients = (event) => {
-        setIngredients(event.target.value.split('\n'));
+      
+        const ingredientsArray = event.target.value.split(',').map((ingredient) => ingredient.trim());
+        setIngredients(ingredientsArray);
     }
 
     const updateCakeRating = (event) => {
@@ -28,13 +30,18 @@ const CakeForm = ({ addCake }) => {
     const handleFormSubmit = (event) => {
         event.preventDefault();
 
-        // if (!cakeName || !ingredients || !rating || !price){
-        //     alert("Need to provide all details");
-        //     return;
-        // }
+       
+       
+       
+       
+       
+        if (!cakeName || !ingredients || !rating || !price){
+            alert("Need to provide all details");
+            return;
+        }
 
         const newCake = {
-            cakeName: event.target.value,
+            cakeName: cakeName,
             ingredients: ingredients,
             rating: rating,
             price: price,
@@ -45,6 +52,7 @@ const CakeForm = ({ addCake }) => {
         setRating("");
         setPrice("");
         addCake(newCake);
+        console.log(cakeName);
     }
 
 

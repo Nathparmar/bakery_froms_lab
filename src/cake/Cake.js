@@ -5,11 +5,11 @@ const Cake = ({cakeName, ingredients, price, rating}) => {
         <h2>{cakeName}</h2>
         <p>Ingredients:</p>
         <ul>
-            {ingredients.map((ingredient) => (
-            <li>{ingredient}</li>
+            {ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
             ))}
         </ul>
-        <p><b>Price: </b>{price}</p>
+        <p><b>Price: £</b>{price}</p>
         <p><b>Rating: </b>{rating}</p>
     </>
   )
