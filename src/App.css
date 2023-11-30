@@ -5,6 +5,10 @@ body {
 
 #cakeContainers {
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    border-color: black;
+    border: 1em;
 
 }
