@@ -1,7 +1,7 @@
 const Cake = ({cakeName, ingredients, price, rating}) => {
 
   return (
-    <>
+    <section id="cakeContainers">
         <h2>{cakeName}</h2>
         <p>Ingredients:</p>
         <ul>
@@ -11,7 +11,7 @@ const Cake = ({cakeName, ingredients, price, rating}) => {
         </ul>
         <p><b>Price: £</b>{price}</p>
         <p><b>Rating: </b>{rating}</p>
-    </>
+    </section>
   )
 }
 

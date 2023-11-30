@@ -1,0 +1,10 @@
+body {
+    background-color: wheat;
+    color: crimson;
+}
+
+#cakeContainers {
+    display: flex;
+    flex-flow: row wrap;
+
+}
